@@ -1,4 +1,4 @@
-/* 清新自然风格（绿色系） */
+/* 方案 2: 暗黑风格 */
 * {
     margin: 0;
     padding: 0;
@@ -8,8 +8,8 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
-    color: #2d3436;
-    background: linear-gradient(135deg, #f0f9f4 0%, #e8f5e9 100%);
+    color: #e0e0e0;
+    background: #0a0a0a;
     min-height: 100vh;
 }
 
@@ -20,61 +20,44 @@ body {
 }
 
 header {
-    background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
-    color: white;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #e0e0e0;
     padding: 3rem 0;
-    box-shadow: 0 4px 20px rgba(0, 184, 148, 0.3);
-    position: relative;
-    overflow: hidden;
-}
-
-header::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #00b894, #00cec9, #00b894);
-    background-size: 200% 100%;
-    animation: shimmer 3s linear infinite;
-}
-
-@keyframes shimmer {
-    0% { background-position: -200% 0; }
-    100% { background-position: 200% 0; }
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    border-bottom: 2px solid #e94560;
 }
 
 header h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
     font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    background: linear-gradient(135deg, #e94560 0%, #ff6b6b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 header nav {
     display: flex;
     gap: 1.5rem;
-    position: relative;
-    z-index: 1;
 }
 
 header nav a {
-    color: white;
+    color: #e0e0e0;
     text-decoration: none;
     padding: 0.75rem 1.5rem;
-    border-radius: 25px;
+    border-radius: 8px;
     transition: all 0.3s ease;
     font-weight: 500;
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(10px);
+    border: 1px solid rgba(233, 69, 96, 0.3);
 }
 
 header nav a:hover,
 header nav a.active {
-    background: rgba(255,255,255,0.3);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    background: #e94560;
+    color: #0a0a0a;
+    border-color: #e94560;
+    box-shadow: 0 0 20px rgba(233, 69, 96, 0.5);
 }
 
 main {
@@ -86,46 +69,46 @@ main {
 
 .blog-posts h2 {
     margin-bottom: 2rem;
-    color: #00b894;
+    color: #e94560;
     font-size: 2rem;
     font-weight: 600;
 }
 
 .post-card {
-    background: white;
-    border-radius: 20px;
+    background: #1a1a2e;
+    border-radius: 15px;
     padding: 2rem;
     margin-bottom: 2rem;
-    box-shadow: 0 10px 40px rgba(0, 184, 148, 0.15);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 2px solid rgba(0, 184, 148, 0.1);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(233, 69, 96, 0.2);
 }
 
 .post-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 60px rgba(0, 184, 148, 0.25);
-    border-color: #00b894;
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px rgba(233, 69, 96, 0.3);
+    border-color: #e94560;
 }
 
 .post-card h3 {
-    color: #00b894;
+    color: #e94560;
     margin-bottom: 0.75rem;
     font-size: 1.75rem;
     font-weight: 600;
 }
 
 .post-card h3 a {
-    color: #00b894;
+    color: #e94560;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .post-card h3 a:hover {
-    color: #00cec9;
+    color: #ff6b6b;
 }
 
 .post-card .meta {
-    color: #636e72;
+    color: #888;
     font-size: 0.9rem;
     margin-bottom: 1rem;
     display: flex;
@@ -134,35 +117,35 @@ main {
 }
 
 .post-card .excerpt {
-    color: #555;
+    color: #b0b0b0;
     margin-bottom: 1.5rem;
     line-height: 1.8;
 }
 
 .post-card .read-more {
     display: inline-block;
-    color: white;
+    color: #e94560;
     text-decoration: none;
     font-weight: 600;
-    padding: 0.6rem 1.8rem;
-    border-radius: 25px;
-    background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e94560;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 184, 148, 0.3);
 }
 
 .post-card .read-more:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 184, 148, 0.4);
+    background: #e94560;
+    color: #0a0a0a;
+    box-shadow: 0 0 20px rgba(233, 69, 96, 0.5);
 }
 
 .sidebar {
-    background: white;
-    border-radius: 20px;
+    background: #1a1a2e;
+    border-radius: 15px;
     padding: 2rem;
-    box-shadow: 0 10px 40px rgba(0, 184, 148, 0.15);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
     height: fit-content;
-    border: 2px solid rgba(0, 184, 148, 0.1);
+    border: 1px solid rgba(233, 69, 96, 0.2);
 }
 
 .widget {
@@ -174,10 +157,10 @@ main {
 }
 
 .widget h3 {
-    color: #00b894;
+    color: #e94560;
     margin-bottom: 1.5rem;
     padding-bottom: 1rem;
-    border-bottom: 3px solid #00b894;
+    border-bottom: 2px solid #e94560;
     font-size: 1.5rem;
     font-weight: 600;
 }
@@ -191,29 +174,29 @@ main {
 }
 
 .widget ul li a {
-    color: #2d3436;
+    color: #e0e0e0;
     text-decoration: none;
-    padding: 0.6rem 1rem;
-    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
     transition: all 0.3s ease;
     display: block;
     border: 1px solid transparent;
 }
 
 .widget ul li a:hover {
-    background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
-    color: white;
+    background: rgba(233, 69, 96, 0.1);
+    color: #e94560;
+    border-color: #e94560;
     transform: translateX(5px);
-    box-shadow: 0 4px 15px rgba(0, 184, 148, 0.3);
 }
 
 footer {
-    background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
-    color: white;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #e0e0e0;
     text-align: center;
     padding: 3rem 0;
     margin-top: 3rem;
-    box-shadow: 0 -4px 20px rgba(0, 184, 148, 0.3);
+    border-top: 2px solid #e94560;
 }
 
 @media (max-width: 768px) {
@@ -245,7 +228,7 @@ footer {
 }
 
 .post-detail h1 {
-    color: #00b894;
+    color: #e94560;
     font-size: 2.5rem;
     margin-bottom: 1rem;
     font-weight: 700;
@@ -257,7 +240,7 @@ footer {
 }
 
 .post-detail .post-body h2 {
-    color: #00b894;
+    color: #e94560;
     margin-top: 2.5rem;
     margin-bottom: 1.5rem;
     font-size: 1.75rem;
@@ -265,6 +248,7 @@ footer {
 
 .post-detail .post-body p {
     margin-bottom: 1.5rem;
+    color: #b0b0b0;
 }
 
 .post-detail .post-body ul,
@@ -275,24 +259,25 @@ footer {
 
 .post-detail .post-body li {
     margin-bottom: 0.75rem;
+    color: #b0b0b0;
 }
 
 .back-link {
     display: inline-block;
     margin-top: 2rem;
-    color: white;
+    color: #e94560;
     text-decoration: none;
     font-weight: 600;
     padding: 0.75rem 2rem;
-    border-radius: 25px;
-    background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+    border-radius: 8px;
+    border: 1px solid #e94560;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 184, 148, 0.3);
 }
 
 .back-link:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 184, 148, 0.4);
+    background: #e94560;
+    color: #0a0a0a;
+    box-shadow: 0 0 20px rgba(233, 69, 96, 0.5);
 }
 
 .about-page {
@@ -305,14 +290,14 @@ footer {
 }
 
 .about-page h1 {
-    color: #00b894;
+    color: #e94560;
     font-size: 2.5rem;
     margin-bottom: 1rem;
     font-weight: 700;
 }
 
 .about-page h2 {
-    color: #00b894;
+    color: #e94560;
     margin-top: 2.5rem;
     margin-bottom: 1.5rem;
     font-size: 1.75rem;
@@ -321,6 +306,7 @@ footer {
 .about-page p {
     margin-bottom: 1.5rem;
     line-height: 1.9;
+    color: #b0b0b0;
 }
 
 .about-page ul {
@@ -330,4 +316,5 @@ footer {
 
 .about-page li {
     margin-bottom: 0.75rem;
+    color: #b0b0b0;
 }

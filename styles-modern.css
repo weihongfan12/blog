@@ -1,4 +1,4 @@
-/* 清新自然风格（绿色系） */
+/* 方案 1: 现代简约风格（蓝色系） */
 * {
     margin: 0;
     padding: 0;
@@ -8,8 +8,8 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
-    color: #2d3436;
-    background: linear-gradient(135deg, #f0f9f4 0%, #e8f5e9 100%);
+    color: #2c3e50;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     min-height: 100vh;
 }
 
@@ -20,36 +20,35 @@ body {
 }
 
 header {
-    background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     padding: 3rem 0;
-    box-shadow: 0 4px 20px rgba(0, 184, 148, 0.3);
+    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
     position: relative;
     overflow: hidden;
 }
 
-header::after {
+header::before {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #00b894, #00cec9, #00b894);
-    background-size: 200% 100%;
-    animation: shimmer 3s linear infinite;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
 }
 
-@keyframes shimmer {
-    0% { background-position: -200% 0; }
-    100% { background-position: 200% 0; }
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 header h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
     font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
 header nav {
@@ -66,15 +65,14 @@ header nav a {
     border-radius: 25px;
     transition: all 0.3s ease;
     font-weight: 500;
-    background: rgba(255,255,255,0.1);
     backdrop-filter: blur(10px);
 }
 
 header nav a:hover,
 header nav a.active {
-    background: rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.25);
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 main {
@@ -86,7 +84,7 @@ main {
 
 .blog-posts h2 {
     margin-bottom: 2rem;
-    color: #00b894;
+    color: #667eea;
     font-size: 2rem;
     font-weight: 600;
 }
@@ -96,41 +94,44 @@ main {
     border-radius: 20px;
     padding: 2rem;
     margin-bottom: 2rem;
-    box-shadow: 0 10px 40px rgba(0, 184, 148, 0.15);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 2px solid rgba(0, 184, 148, 0.1);
+    border: 1px solid rgba(255,255,255,0.5);
 }
 
 .post-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 60px rgba(0, 184, 148, 0.25);
-    border-color: #00b894;
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
 }
 
 .post-card h3 {
-    color: #00b894;
+    color: #667eea;
     margin-bottom: 0.75rem;
     font-size: 1.75rem;
     font-weight: 600;
 }
 
 .post-card h3 a {
-    color: #00b894;
+    color: #667eea;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .post-card h3 a:hover {
-    color: #00cec9;
+    color: #764ba2;
 }
 
 .post-card .meta {
-    color: #636e72;
+    color: #7f8c8d;
     font-size: 0.9rem;
     margin-bottom: 1rem;
     display: flex;
     gap: 1rem;
     align-items: center;
+}
+
+.post-card .meta::before {
+    content: '📅';
 }
 
 .post-card .excerpt {
@@ -141,28 +142,28 @@ main {
 
 .post-card .read-more {
     display: inline-block;
-    color: white;
+    color: #667eea;
     text-decoration: none;
     font-weight: 600;
-    padding: 0.6rem 1.8rem;
-    border-radius: 25px;
-    background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 184, 148, 0.3);
 }
 
 .post-card .read-more:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 184, 148, 0.4);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
 }
 
 .sidebar {
     background: white;
     border-radius: 20px;
     padding: 2rem;
-    box-shadow: 0 10px 40px rgba(0, 184, 148, 0.15);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
     height: fit-content;
-    border: 2px solid rgba(0, 184, 148, 0.1);
+    border: 1px solid rgba(255,255,255,0.5);
 }
 
 .widget {
@@ -174,10 +175,10 @@ main {
 }
 
 .widget h3 {
-    color: #00b894;
+    color: #667eea;
     margin-bottom: 1.5rem;
     padding-bottom: 1rem;
-    border-bottom: 3px solid #00b894;
+    border-bottom: 3px solid #667eea;
     font-size: 1.5rem;
     font-weight: 600;
 }
@@ -191,29 +192,27 @@ main {
 }
 
 .widget ul li a {
-    color: #2d3436;
+    color: #2c3e50;
     text-decoration: none;
-    padding: 0.6rem 1rem;
+    padding: 0.5rem 1rem;
     border-radius: 10px;
     transition: all 0.3s ease;
     display: block;
-    border: 1px solid transparent;
 }
 
 .widget ul li a:hover {
-    background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     transform: translateX(5px);
-    box-shadow: 0 4px 15px rgba(0, 184, 148, 0.3);
 }
 
 footer {
-    background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     text-align: center;
     padding: 3rem 0;
     margin-top: 3rem;
-    box-shadow: 0 -4px 20px rgba(0, 184, 148, 0.3);
+    box-shadow: 0 -4px 20px rgba(102, 126, 234, 0.3);
 }
 
 @media (max-width: 768px) {
@@ -245,7 +244,7 @@ footer {
 }
 
 .post-detail h1 {
-    color: #00b894;
+    color: #667eea;
     font-size: 2.5rem;
     margin-bottom: 1rem;
     font-weight: 700;
@@ -257,7 +256,7 @@ footer {
 }
 
 .post-detail .post-body h2 {
-    color: #00b894;
+    color: #667eea;
     margin-top: 2.5rem;
     margin-bottom: 1.5rem;
     font-size: 1.75rem;
@@ -280,19 +279,19 @@ footer {
 .back-link {
     display: inline-block;
     margin-top: 2rem;
-    color: white;
+    color: #667eea;
     text-decoration: none;
     font-weight: 600;
     padding: 0.75rem 2rem;
     border-radius: 25px;
-    background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 184, 148, 0.3);
 }
 
 .back-link:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 184, 148, 0.4);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
 }
 
 .about-page {
@@ -305,14 +304,14 @@ footer {
 }
 
 .about-page h1 {
-    color: #00b894;
+    color: #667eea;
     font-size: 2.5rem;
     margin-bottom: 1rem;
     font-weight: 700;
 }
 
 .about-page h2 {
-    color: #00b894;
+    color: #667eea;
     margin-top: 2.5rem;
     margin-bottom: 1.5rem;
     font-size: 1.75rem;
