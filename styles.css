@@ -331,3 +331,178 @@ footer {
 .about-page li {
     margin-bottom: 0.75rem;
 }
+
+.nodes-page {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.nodes-page .post-card {
+    margin-bottom: 0;
+}
+
+.nodes-page h1 {
+    color: #00b894;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.nodes-page h2 {
+    color: #00b894;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.nodes-page h3 {
+    color: #2d3436;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.subscription-box {
+    background: linear-gradient(135deg, rgba(0, 184, 148, 0.1) 0%, rgba(0, 206, 201, 0.1) 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    border: 2px solid rgba(0, 184, 148, 0.2);
+}
+
+.subscription-link {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.subscription-link input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 2px solid #00b894;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: white;
+    color: #2d3436;
+}
+
+.subscription-link button {
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 184, 148, 0.3);
+}
+
+.subscription-link button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 184, 148, 0.4);
+}
+
+.nodes-list {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.node-item {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 40px rgba(0, 184, 148, 0.15);
+    border: 2px solid rgba(0, 184, 148, 0.1);
+    transition: all 0.3s ease;
+}
+
+.node-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px rgba(0, 184, 148, 0.25);
+    border-color: #00b894;
+}
+
+.node-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(0, 184, 148, 0.2);
+}
+
+.node-header h3 {
+    color: #00b894;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.node-purity {
+    background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.node-details {
+    line-height: 1.8;
+}
+
+.node-details p {
+    margin-bottom: 0.75rem;
+    color: #555;
+}
+
+.node-details strong {
+    color: #2d3436;
+    font-weight: 600;
+}
+
+.status-online {
+    color: #00b894;
+    font-weight: 600;
+}
+
+.note {
+    background: linear-gradient(135deg, rgba(255, 193, 7, 0.1) 0%, rgba(255, 152, 0, 0.1) 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-top: 2rem;
+    border: 2px solid rgba(255, 193, 7, 0.2);
+}
+
+.note h3 {
+    color: #ff9800;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.note ul {
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+
+.note li {
+    margin-bottom: 0.75rem;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .nodes-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .subscription-link {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .subscription-link input {
+        margin-bottom: 1rem;
+    }
+}
