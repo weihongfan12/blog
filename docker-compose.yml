@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  directus:
+    image: directus/directus:latest
+    container_name: directus
+    ports:
+      - "8055:8055"
+    environment:
+      DATABASE_CLIENT: postgres
+      DATABASE_HOST: directus-db
+      DATABASE_PORT: 5432
+      DATABASE_NAME: directus
+      DATABASE_USER: directus
+      DATABASE_PASSWORD: directus
+      ADMIN_JWT_SECRET: your-super-secret-jwt-token-change-me
+      NODE_ENV: production
+    depends_on:
+      - directus-db
+    volumes:
+      - directus-uploads:/directus/public/uploads
+    restart: unless-stopped
+
+  directus-db:
+    image: postgres:15-alpine
+    container_name: directus-db
+    environment:
+      POSTGRES_USER: directus
+      POSTGRES_PASSWORD: directus
+      POSTGRES_DB: directus
+    volumes:
+      - directus-data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  directus-data:
+    driver: local
+  directus-uploads:
+    driver: local
