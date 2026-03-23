@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>科学上网 - 我的博客</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="js/dataManager.js"></script>
+    <script type="module" src="js/nodeManager.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>我的博客</h1>
+            <nav>
+                <a href="index.html">首页</a>
+                <a href="about.html">关于</a>
+                <a href="nodes.html">节点</a>
+                <a href="science-networking.html" class="active">科学上网</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="science-networking-page">
+            <div class="post-card">
+                <h1>科学上网</h1>
+                <p>探索网络世界，获取最新资讯和工具。</p>
+                
+                <div class="categories-section">
+                    <h2>分类</h2>
+                    <div class="categories-grid">
+                        <div class="category-card">
+                            <h3>节点</h3>
+                            <p>自建节点和订阅链接</p>
+                            <a href="nodes.html" class="category-link">查看节点 →</a>
+                        </div>
+                        <div class="category-card">
+                            <h3>其他</h3>
+                            <p>网络工具、教程、资源</p>
+                            <div class="category-items">
+                                <a href="#" class="category-item">网络工具</a>
+                                <a href="#" class="category-item">VPN 教程</a>
+                                <a href="#" class="category-item">代理工具</a>
+                                <a href="#" class="category-item">网络资源</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="note">
+                    <h3>使用说明</h3>
+                    <ul>
+                        <li>点击"节点"分类查看自建节点和订阅链接</li>
+                        <li>点击"其他"分类查看网络工具和教程</li>
+                        <li>所有内容都可以在 Trae 中编辑</li>
+                        <li>数据存储在本地 JSON 文件中</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 我的博客. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <script type="module">
+        document.addEventListener('DOMContentLoaded', () => {
+            const categoryLinks = document.querySelectorAll('.category-link');
+            categoryLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                });
+            });
+        });
+    </script>
+</body>
+</html>
