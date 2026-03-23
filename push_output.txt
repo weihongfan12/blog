@@ -1,0 +1,9 @@
+﻿git.exe : Pushing to https://github.com/weihongfan12/blog.git
+所在位置 行:1 字符: 30
++ ... \my-blog" ; & "C:\Program Files\Git\bin\git.exe" push origin main --v ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Pushing to http...gfan12/blog.git:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+fatal: unable to access 'https://github.com/weihongfan12/blog.git/': Failed to connect to github.com port 443 after 21096 m
+s: Could not connect to server
