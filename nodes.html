@@ -26,10 +26,18 @@
                 
                 <h2>自建订阅链接</h2>
                 <div class="subscription-box">
-                    <p>订阅链接：</p>
+                    <p>自建订阅链接：</p>
                     <div class="subscription-link">
                         <input type="text" value="https://last.whftest.dpdns.org/sub?token=d7665cc9aa732864499fde639336298" readonly>
                         <button onclick="copySubscription()">复制</button>
+                    </div>
+                </div>
+                
+                <div class="subscription-box">
+                    <p>高纯度订阅链接：</p>
+                    <div class="subscription-link">
+                        <input type="text" value="https://weihongfan11.serv00.net/788a4aae" readonly>
+                        <button onclick="copyHighPuritySubscription()">复制</button>
                     </div>
                 </div>
 
@@ -112,6 +120,16 @@
             const input = document.querySelector('.subscription-link input');
             navigator.clipboard.writeText(input.value).then(() => {
                 alert('订阅链接已复制到剪贴板！');
+            }).catch(err => {
+                console.error('复制失败:', err);
+            });
+        }
+
+        function copyHighPuritySubscription() {
+            const inputs = document.querySelectorAll('.subscription-link input');
+            const highPurityInput = inputs[1];
+            navigator.clipboard.writeText(highPurityInput.value).then(() => {
+                alert('高纯度订阅链接已复制到剪贴板！');
             }).catch(err => {
                 console.error('复制失败:', err);
             });
